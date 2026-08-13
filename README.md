@@ -19,7 +19,7 @@ classification problem.
 blank `TotalCharges` values, encoding categorical columns.)*
 
 ## c. GitHub Repository Link
-`<[PASTE YOUR GITHUB REPO LINK HERE](https://github.com/2025da04016-a11y/ML_Assignment2)>`
+`<https://github.com/2025da04016-a11y/ML_Assignment2>`
 
 ## d. Models Used
 
