@@ -27,7 +27,7 @@ blank `TotalCharges` values, encoding categorical columns.)*
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
 |---|---|---|---|---|---|---|
-| Logistic Regression | | | | | | |
+| Logistic Regression |0.7991|0.8402| 0.6426|0.5481 |0.5916 |0.4621 | 
 | Decision Tree | | | | | | |
 | kNN | | | | | | |
 | Naive Bayes | | | | | | |
