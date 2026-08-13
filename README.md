@@ -42,17 +42,17 @@ blank `TotalCharges` values, encoding categorical columns.)*
 |---|---|
 | Logistic Regression |Best overall performer. A simple linear model working this well suggests the churn/no-churn boundary is fairly linearly separable in this feature space, and it didn't overfit despite its simplicity. |
 | Decision Tree |Weakest across nearly every metric. A single unpruned tree tends to overfit the training data and split on noise, which shows up here as poor generalization to the test set — pruning or limiting max_depth would likely help. |
-| kNN | |
-| Naive Bayes | |
-| Random Forest (Ensemble) | |
-| **Overall Winner for your dataset?** | |
+| kNN |Middling performance. As a distance-based method it's sensitive to feature scaling (which we did apply) and to the mix of many one-hot/label-encoded categorical features, which can distort distance calculations and cap its ceiling. |
+| Naive Bayes |Lowest precision (0.5160) but by far the highest Recall (0.7326), giving it the best F1 among the mid-tier models. Its independence assumption between features is clearly violated here (e.g., contract type and tenure are correlated), but that same simplicity makes it biased toward flagging churn, catching more true churners at the cost of more false alarms. |
+| Random Forest (Ensemble) |Second-best overall , and a clear improvement over the single Decision Tree — bagging multiple trees reduces the overfitting/variance problem seen above. Its lower Recall (0.4866) versus Logistic Regression suggests it's more conservative about predicting churn. |
+| **Overall Winner for your dataset?** | Logistic Regression, based on the highest AUC and MCC (the two metrics most robust to class imbalance in churn data) — it strikes the best balance between catching churners and avoiding false alarms, despite being the simplest model in the lineup.|
 
 *(Write 1–2 sentences per model — e.g. did it overfit, was it sensitive
 to feature scaling, how did it handle class imbalance, etc. These
 should reflect YOUR actual run's numbers, not generic statements.)*
 
 ## Live Streamlit App
-`<PASTE YOUR DEPLOYED STREAMLIT APP LINK HERE>`
+`https://mlassignment2-lsxppeqjlse62m3gmdh9ec.streamlit.app/`
 
 ## How to Run Locally
 ```bash
