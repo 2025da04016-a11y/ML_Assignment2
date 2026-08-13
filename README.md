@@ -40,8 +40,8 @@ blank `TotalCharges` values, encoding categorical columns.)*
 
 | ML Model Name | Observation about model performance |
 |---|---|
-| Logistic Regression | |
-| Decision Tree | |
+| Logistic Regression |Best overall performer. A simple linear model working this well suggests the churn/no-churn boundary is fairly linearly separable in this feature space, and it didn't overfit despite its simplicity. |
+| Decision Tree |Weakest across nearly every metric. A single unpruned tree tends to overfit the training data and split on noise, which shows up here as poor generalization to the test set — pruning or limiting max_depth would likely help. |
 | kNN | |
 | Naive Bayes | |
 | Random Forest (Ensemble) | |
